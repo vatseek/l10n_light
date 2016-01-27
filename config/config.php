@@ -21,8 +21,10 @@ $config['langs_aliases'] = array(
     'georgian' => 'ka',
     'uzbek' => 'uz',
 );
+
+$config['default_lang_alias'] = 'ru';
+
 $config['lang_block']['priority'] = 500;
-$config['translate_block']['priority'] = 500;
 $config['user_lang_settings'] = 1;  //  позволяет менять язык через настройки пользователя
 $config['lang_in_url'] = 1; // подставлять язык в урл всегда, позволяет делать выборку в базе по всем языкам, если в урле не передан язык
 // 'lang' - уведомления о новом топике будут получать пользователи с таким же языком в настройках как и язык топика
@@ -50,14 +52,6 @@ $aAllowedLangsAliases = array_intersect_key(
                 $config['langs_aliases'],
                 array_flip($config['allowed_langs'])
 );
-
-// Добавляем rewrite rules для sitemap'ов в роутер
-$aRouterUri = Config::Get('router.uri');
-foreach ($aAllowedLangsAliases as $sLangAlias) {
-    $aRouterUri['/^' . $sLangAlias . '\/sitemap\.xml/i'] = $sLangAlias . '/sitemap';
-    $aRouterUri['/^' . $sLangAlias . '\/sitemap_(\w+)_(\d+)\.xml/i'] = $sLangAlias . '/sitemap/sitemap/\\1/\\2';
-}
-Config::Set('router.uri', $aRouterUri);
 
 $config['use_geoip'] = false;
 return $config;
