@@ -4,18 +4,18 @@
 		<lang name="default">L10n</lang>
 	</name>
 	<author>
-		<lang name="default">Web studio stfalcon.com</lang>
+		<lang name="default">Web studio stfalcon.com & vatseek</lang>
 	</author>
-	<homepage>http://stfalcon.com/</homepage>
-	<version>0.4.0</version>
+	<homepage>https://github.com/vatseek/l10n_light</homepage>
+	<version>0.1.0</version>
 	<requires>
 		<livestreet>1.0</livestreet>
 		<plugins>
 		</plugins>
 	</requires>
 	<description>
-		<lang name="default">To create a multilingual website (different interface and topics languages)</lang>
-		<lang name="russian">Для создания мультиязычного сайта (разные языки интерфейса и записей)</lang>
-		<lang name="ukrainian">Для створення багатомовного сайта (різні мови інтерфейсів і публікацій)</lang>
+		<lang name="default">To create a multilingual website (different interface)</lang>
+		<lang name="russian">Для создания мультиязычного сайта (разные языки интерфейса)</lang>
+		<lang name="ukrainian">Для створення багатомовного сайта (різні мови інтерфейсів)</lang>
 	</description>
 </plugin>
